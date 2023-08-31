@@ -81,7 +81,7 @@ def quicksort(listaNumeros, listaNombres, listaHabilidad, primero=0, ultimo=None
         diccionario[clave] = [listaNumeros[auxiliar2], listaHabilidad[auxiliar2]]
         auxiliar2 += 1
     
-    return diccionario
+    return f"La lista pokemon ordenada alfabeticamente es la siguiente: {diccionario}"
 
 #Count
 def countsort(listaNumeros, listaNombres, listaHabilidad):
@@ -126,6 +126,6 @@ def countsort(listaNumeros, listaNombres, listaHabilidad):
         diccionario[clave] = [lista_ordenadaNm[auxiliar2], lista_ordenadaHb[auxiliar2]]
         auxiliar2+=1
     
-    return diccionario
+    return f"La lista pokemon ordenada por numero de menor a mayor es la siguiente: {diccionario}"
            
 
