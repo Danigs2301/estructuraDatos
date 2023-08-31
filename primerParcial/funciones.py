@@ -1,23 +1,39 @@
 
-#CentinelaW
-def centinelaw(lista, buscado):
-    posicion = -1
-    i=0
-    prueba = lista.items()
-    prueba2 = list(prueba)
 
-    print(prueba2)
-    print(prueba2[0][0])
-    
-    
-    while (i<len(lista)) and (posicion==-1):
-        print(i)
-        if (lista[i] == buscado):
-            posicion = i
-        i +=1
-    print(str(buscado)+" está en la posición "+str(posicion))
-    
-    return posicion
+def buscarPokemonNumero(listaNumeros, listaNombres, listaHabilidad):
+    buscado = int(input("Ingrese número que busca: "))
+    diccionario = countsort(listaNumeros, listaNombres, listaHabilidad)
+
+    resultado = diccionario.get(buscado)
+    if resultado == None:
+        return "El pokemmon no se encuentra en la lista"
+    else: 
+        return f"El Pokemon {buscado} es de nombre {diccionario[buscado][0]} y es de tipo {diccionario[buscado][1]}"
+
+
+def buscarPokemonNombre(listaNumeros, listaNombres, listaHabilidad):
+    buscado = input("Ingrese nombre que busca: ").capitalize()
+    diccionario = quicksort(listaNumeros, listaNombres, listaHabilidad)
+
+    resultado = diccionario.get(buscado)
+    if resultado == None:
+        return "El pokemmon no se encuentra en la lista"
+    else: 
+        return f"El Pokemon {buscado} tiene nùmero {diccionario[buscado][0]} y es de tipo {diccionario[buscado][1]}"
+
+
+def buscarPokemonHabilidad(listaNumeros, listaNombres, listaHabilidad):
+    buscado = input("Ingrese habilidad que busca: ").capitalize()
+    diccionario = {}
+
+    for i in range(0, len(listaHabilidad)):
+
+        if listaHabilidad[i] == buscado:
+            diccionario[listaNumeros[i]] = [listaNombres[i], listaHabilidad[i]]
+
+    print(f"Los pokemones de tipo {buscado} son: {len(diccionario)}")
+    return diccionario
+
 
 def quicksort(listaNumeros, listaNombres, listaHabilidad, primero=0, ultimo=None):
     if ultimo is None:
@@ -102,5 +118,3 @@ def countsort(listaNumeros, listaNombres, listaHabilidad):
     return diccionario
            
 
-
-#centinelaw(b, 640)
