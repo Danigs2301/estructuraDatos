@@ -8,18 +8,18 @@ def menu(listaNombres, listaNumeros, listaHabilidad):
             1. Mostrar un listado de Pokémons ordenados por el número usando del método de ordenamiento por conteo
             2. Realizar un listado ordenado por nombre utilizando el método de ordenamiento rápido
             3. Mostrar toda la información un Pokémon de un número en especifico
-            4. Listar todos los pokemones que inician con una letra en especifico
-            5. Determinar si existe el Pokémon de un nombre en especifico y mostrar toda su información 
-            6. Realizar un listado de todos los Pokémon de una habilidad en especifico y calcular cuantos son
+            4. Determinar si existe el Pokémon de un nombre en especifico y mostrar toda su información 
+            5. Realizar un listado de todos los Pokémon de una habilidad en especifico y calcular cuantos son
+            6. Listar todos los pokemones que inician con una letra en especifico
             """
     
     optionsDirectory = {
         1: countsort,
         2: quicksort,
         3: buscarPokemonNumero,
-        4: buscarPokemonInicial,
-        5: buscarPokemonNombre,
-        6: buscarPokemonHabilidad
+        4: buscarPokemonNombre,
+        5: buscarPokemonHabilidad,
+        6: buscarPokemonInicial
     }
 
     while True: 
