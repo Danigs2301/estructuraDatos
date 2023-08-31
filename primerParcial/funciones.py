@@ -34,6 +34,17 @@ def buscarPokemonHabilidad(listaNumeros, listaNombres, listaHabilidad):
     print(f"Los pokemones de tipo {buscado} son: {len(diccionario)}")
     return diccionario
 
+def buscarPokemonInicial(listaNumeros, listaNombres, listaHabilidad):
+    buscado = input("Ingrese letra que busca: ").capitalize()
+    diccionario = {}
+
+    for i in range(0, len(listaNombres)):
+
+        if listaNombres[i][0] == buscado:
+            diccionario[listaNumeros[i]] = [listaNombres[i], listaHabilidad[i]]
+
+    return f"Los pokemones que incian con {buscado} son: {diccionario}"
+
 
 def quicksort(listaNumeros, listaNombres, listaHabilidad, primero=0, ultimo=None):
     if ultimo is None:
